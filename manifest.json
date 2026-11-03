@@ -1,0 +1,31 @@
+{
+  "name": "LYL × Imagine1day — Ethiopia 2026",
+  "short_name": "LYL Ethiopia",
+  "description": "Interactive itinerary for the LYL × Imagine1day journey to Ethiopia, 12–23 November 2026.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#b32249",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

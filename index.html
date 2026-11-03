@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>LYL Ethiopia 2026</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Mulish:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&display=swap">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#b32249">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="LYL Ethiopia">
+<link rel="apple-touch-icon" href="assets/apple-touch-180.png">
+<style>
+/* Layout: centered booklet column; sticky bar + horizontal day navigator; full-bleed brand bands, 820px content column. Photos: cover-fit figures. Day 1–2 schedule updated. */
+:root{
+  --pink:#b32249; --pink-deep:#8d1a3a; --orange:#f79422; --orange-deep:#cf6f12; --lime:#b7d434; --lime-deep:#7f961d; --cyan:#5ac5c7; --cyan-deep:#2f8f91;
+  --bg:#fbf4f6; --surface:#ffffff; --surface-2:#fdeef2; --fg:#2a2230; --muted:#6f6670; --line:#ecdfe4;
+  --shadow:0 10px 30px rgba(130,30,65,.12); --shadow-sm:0 4px 14px rgba(130,30,65,.08);
+  --ff-display:"Bungee","Arial Black","DejaVu Sans",system-ui,sans-serif;
+  --ff-body:"Mulish",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#180f15; --surface:#241922; --surface-2:#2d1f28; --fg:#f6ecf0; --muted:#bda9b4; --line:#3b2b34;
+  --shadow:0 12px 34px rgba(0,0,0,.5); --shadow-sm:0 4px 16px rgba(0,0,0,.42); color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#180f15; --surface:#241922; --surface-2:#2d1f28; --fg:#f6ecf0; --muted:#bda9b4; --line:#3b2b34;
+  --shadow:0 12px 34px rgba(0,0,0,.5); --shadow-sm:0 4px 16px rgba(0,0,0,.42); color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--ff-body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:var(--ff-display);font-weight:400;line-height:1.05;text-wrap:balance}
+a{color:inherit}
+img{display:block}
+.ic-svg{width:1em;height:1em;flex:0 0 auto;vertical-align:-.14em}
+.wrap{max-width:820px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--ff-display);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--pink);display:inline-flex;align-items:center;gap:8px}
+.eyebrow .ic-svg{font-size:1.05rem}
+.section{padding-block:40px;scroll-margin-top:66px}
+.section-head{display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+.section-head h2{font-size:clamp(1.5rem,5vw,2.15rem)}
+.lede{color:var(--muted);max-width:62ch}
+
+/* top bar */
+header.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar-in{display:flex;align-items:center;gap:12px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:9px;font-family:var(--ff-display);font-size:.82rem}
+.brand .dot{width:13px;height:13px;border-radius:50%;background:conic-gradient(from 0deg,var(--pink),var(--orange),var(--lime),var(--cyan),var(--pink));flex:0 0 auto}
+.brand .mark{height:22px;width:auto;flex:0 0 auto}
+.brand.brandlogos{background:#fff;border-radius:9px;padding:4px 9px;gap:8px;box-shadow:var(--shadow-sm)}
+.brand.brandlogos img{height:16px;width:auto;display:block}
+.brand.brandlogos .bdiv{width:1px;height:15px;background:#e2d7dc;flex:0 0 auto}
+.cobrand{display:inline-flex;align-items:center;gap:16px;background:#fff;border-radius:16px;padding:11px 18px;box-shadow:0 10px 26px rgba(0,0,0,.22)}
+.cobrand img{height:30px;width:auto;display:block}
+.cobrand .div{width:1px;height:28px;background:#e2d7dc;flex:0 0 auto}
+.cobrand-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#b9a0ab;margin-bottom:9px}
+@media (max-width:460px){.cobrand{gap:12px;padding:9px 14px}.cobrand img{height:24px}.cobrand .div{height:22px}}
+nav.top{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+nav.top a{font-weight:800;font-size:.8rem;color:var(--muted);text-decoration:none;padding:7px 10px;border-radius:999px}
+nav.top a:hover{color:var(--fg);background:var(--surface-2)}
+.tbtn{border:1px solid var(--line);background:var(--surface);color:var(--fg);width:38px;height:38px;border-radius:999px;cursor:pointer;flex:0 0 auto;display:grid;place-items:center;font-size:1.05rem}
+.tbtn:focus-visible,nav.top a:focus-visible,.daypill:focus-visible,.linkcell:focus-visible,.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+@media (max-width:640px){nav.top a.hideSm{display:none}}
+
+/* hero */
+.hero{position:relative;background:#7a1734 center/cover no-repeat;color:#fff;overflow:hidden}
+.hero .photo-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%}
+.hero::after{content:"";position:absolute;inset:0;background:
+   linear-gradient(180deg,rgba(141,26,58,.72),rgba(141,26,58,.78) 45%,rgba(94,18,48,.92)),
+   radial-gradient(40% 30% at 12% 88%,rgba(247,148,34,.34),transparent 70%),
+   radial-gradient(34% 26% at 95% 78%,rgba(90,197,199,.3),transparent 70%)}
+.hero .wrap{position:relative;z-index:1;padding-block:52px 56px;text-align:center}
+.hero .eyebrow{color:var(--orange);justify-content:center}
+.hero h1{font-size:clamp(3.2rem,16vw,6rem);letter-spacing:.02em;margin:.1em 0 0;color:#fff;text-shadow:0 3px 0 rgba(0,0,0,.18)}
+.hero .yr{font-family:var(--ff-display);color:var(--lime);font-size:clamp(1.3rem,6vw,2rem)}
+.hero .org{font-family:var(--ff-display);font-size:clamp(1rem,3.6vw,1.3rem);margin-top:16px;padding-top:14px;border-top:3px solid var(--orange);display:inline-block}
+.hero .dates{font-weight:800;letter-spacing:.06em;margin-top:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.chip{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;padding:6px 12px;border-radius:999px;font-weight:800;font-size:.82rem;display:inline-flex;gap:6px;align-items:center}
+.tagline{margin-top:18px;font-style:italic;color:#ffe7d6}
+.cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.btn{font-weight:900;text-decoration:none;padding:12px 18px;border-radius:999px;font-size:.92rem;display:inline-flex;align-items:center;gap:8px;border:2px solid transparent}
+.btn-solid{background:var(--orange);color:#3a2300}
+.btn-ghost{background:transparent;border-color:rgba(255,255,255,.55);color:#fff}
+.btn:hover{transform:translateY(-1px)}
+
+/* facts */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 10px;text-align:center;box-shadow:var(--shadow-sm)}
+.fact .ic{color:var(--pink);font-size:1.3rem;margin-bottom:4px}
+.fact .n{font-family:var(--ff-display);font-size:1.5rem;color:var(--pink)}
+.fact .l{font-size:.72rem;color:var(--muted);font-weight:700;margin-top:2px}
+@media (max-width:560px){.facts{grid-template-columns:repeat(2,1fr)}}
+
+/* route */
+.route{display:flex;flex-direction:column}
+.stop{display:grid;grid-template-columns:30px 1fr;gap:14px}
+.stop .rail{display:flex;flex-direction:column;align-items:center}
+.stop .node{width:28px;height:28px;border-radius:50%;background:var(--c,var(--pink));color:#fff;display:grid;place-items:center;font-size:.85rem;box-shadow:0 0 0 4px color-mix(in srgb,var(--c,var(--pink)) 22%,transparent);margin-top:2px}
+.stop .line{flex:1;width:3px;background:linear-gradient(var(--c,var(--pink)),var(--cN,var(--orange)));min-height:26px;border-radius:2px;opacity:.5}
+.stop:last-child .line{display:none}
+.stop .body{padding-bottom:18px}
+.stop .place{font-family:var(--ff-display);font-size:1rem}
+.stop .meta{font-size:.84rem;color:var(--muted);font-weight:700}
+
+/* distance infographic */
+.dbar{display:grid;grid-template-columns:1fr;gap:12px;margin-top:4px}
+.dleg{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--muted);font-weight:700}
+.drow{display:grid;grid-template-columns:150px 1fr auto;gap:12px;align-items:center}
+.drow .dl{font-weight:800;font-size:.84rem}
+.drow .dt{height:16px;border-radius:999px;background:var(--surface-2);overflow:hidden}
+.drow .df{height:100%;border-radius:999px;background:var(--orange);display:block}
+.drow .dv{font-family:var(--ff-display);font-size:.82rem;color:var(--fg);font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (max-width:540px){.drow{grid-template-columns:110px 1fr auto;gap:8px}.drow .dl{font-size:.76rem}}
+
+/* day-type mix */
+.mixbar{display:flex;height:30px;border-radius:999px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.mixbar span{display:block}
+.mixleg{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.mixleg div{display:flex;align-items:center;gap:8px;font-size:.84rem;font-weight:700}
+.mixleg .sw{width:14px;height:14px;border-radius:4px;flex:0 0 auto}
+.mixleg b{font-family:var(--ff-display);font-weight:400}
+
+/* day navigator */
+.daynav{position:sticky;top:calc(env(safe-area-inset-top,0px) + 54px);z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.daynav-in{display:flex;gap:7px;overflow-x:auto;padding:10px 0;scrollbar-width:thin}
+.daypill{flex:0 0 auto;font-family:var(--ff-display);font-size:.84rem;text-decoration:none;color:var(--fg);background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:7px 12px;cursor:pointer;white-space:nowrap}
+.daypill b{color:var(--muted);font-family:var(--ff-body);font-weight:800;font-size:.72rem;margin-left:5px}
+.daypill[aria-current="true"]{background:var(--pink);color:#fff;border-color:var(--pink)}
+.daypill[aria-current="true"] b{color:#ffd9c7}
+
+/* day cards */
+.days{display:flex;flex-direction:column;gap:20px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow-sm);overflow:hidden;scroll-margin-top:120px}
+.day-photo{position:relative;height:180px}
+.day-photo img{width:100%;height:100%;object-fit:cover}
+.day-photo .cap{position:absolute;left:14px;bottom:10px;color:#fff;font-family:var(--ff-display);font-size:.9rem;text-shadow:0 2px 6px rgba(0,0,0,.6);z-index:1}
+.day-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,.55))}
+.day-top{display:flex;gap:14px;align-items:center;padding:16px 18px;border-left:9px solid var(--c)}
+.day-num{font-family:var(--ff-display);font-size:1.9rem;line-height:1;color:var(--c);min-width:42px}
+.day-num small{display:block;font-size:.5rem;letter-spacing:.2em;color:var(--muted)}
+.day-h{display:flex;flex-direction:column;gap:2px}
+.day-date{font-weight:900}
+.day-theme{font-size:.86rem;color:var(--muted);font-style:italic}
+.day-badge{margin-left:auto;font-family:var(--ff-display);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--c);padding:6px 10px;border-radius:999px;white-space:nowrap;display:inline-flex;gap:6px;align-items:center}
+.day-note{padding:0 18px 14px;font-size:.82rem;color:var(--muted);font-style:italic}
+.day-intro{padding:2px 18px 10px;font-size:.9rem}
+table.sched{width:100%;border-collapse:collapse;font-size:.88rem}
+.sched th{text-align:left;font-weight:900;font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;color:#fff;background:var(--c);padding:7px 14px}
+.sched td{padding:9px 14px;border-top:1px solid var(--line);vertical-align:top}
+.sched tr:nth-child(even) td{background:var(--surface-2)}
+.sched .t{font-weight:900;color:var(--c-deep,var(--pink));white-space:nowrap;width:86px}
+.sched .w{width:34%;color:var(--muted);font-weight:700}
+.linkcell{color:var(--pink);font-weight:800;text-decoration:none;border-bottom:2px solid color-mix(in srgb,var(--pink) 35%,transparent);display:inline-flex;align-items:center;gap:4px}
+.linkcell:hover{border-bottom-color:var(--pink)}
+.linkcell .ic-svg{font-size:.82em;opacity:.7}
+
+/* bands & grids */
+.band{background:var(--surface)}
+.band-pink{background:linear-gradient(180deg,var(--pink),var(--pink-deep));color:#fff}
+.band-pink .section-head h2,.band-pink .eyebrow{color:#fff}
+.band-pink .lede{color:#ffe1ea}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:720px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:460px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow-sm)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gallery figure{margin:0;position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow-sm)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gallery figure:hover img{transform:scale(1.06)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;font-size:.72rem;font-weight:800;padding:18px 10px 8px}
+@media (max-width:720px){.gallery{grid-template-columns:repeat(2,1fr)}}
+.gallery figure.wide{grid-column:1 / -1;aspect-ratio:auto}
+.gallery figure.wide img{object-fit:contain;width:100%;max-height:440px;background:var(--surface-2)}
+
+/* packing */
+.pack h3{font-family:var(--ff-display);font-size:.86rem;color:var(--pink);margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.pack h3 .ic-svg{font-size:1.1rem}
+.pack ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:.88rem}
+.pack li::marker{color:var(--orange)}
+
+/* safety */
+.safety{background:linear-gradient(135deg,var(--pink),var(--pink-deep));color:#fff;border:none}
+.safety .k{font-family:var(--ff-display);font-size:.72rem;letter-spacing:.1em;color:var(--lime);display:flex;gap:8px;align-items:center}
+.copy{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap}
+.copybtn{font-weight:800;font-size:.76rem;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:999px;padding:4px 10px;cursor:pointer}
+.sel{user-select:all}
+.policies{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.policy{flex:1 1 180px;display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;text-decoration:none;color:var(--fg);font-weight:800;font-size:.86rem;box-shadow:var(--shadow-sm)}
+.policy:hover{border-color:var(--pink)}
+.policy .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:0 0 auto;color:#fff;font-size:1.05rem}
+
+/* amharic */
+.phrase{display:flex;flex-direction:column;gap:3px}
+.phrase .en{font-weight:800;font-size:.82rem;color:var(--muted)}
+.phrase .am{font-family:var(--ff-display);font-size:1.1rem;color:var(--pink)}
+.phrase .pr{font-size:.82rem;font-style:italic}
+
+/* country */
+.cfact{display:flex;gap:12px;align-items:flex-start}
+.cfact .ic{width:42px;height:42px;border-radius:12px;flex:0 0 auto;display:grid;place-items:center;color:#fff;font-size:1.15rem}
+.cfact .k{font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.cfact .v{font-weight:800}
+.mapfig{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+.mapfig img{width:100%;height:auto}
+
+/* water callout */
+.water{display:grid;grid-template-columns:1fr 1.1fr;gap:0;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.water .pic{min-height:340px;background-position:center;background-repeat:no-repeat;background-size:contain;background-color:#0f3f41}
+.water .txt{background:linear-gradient(135deg,var(--cyan-deep),#17565a);color:#fff;padding:26px}
+.water .big{font-family:var(--ff-display);font-size:clamp(2rem,9vw,3rem);line-height:1}
+@media (max-width:620px){.water{grid-template-columns:1fr}.water .pic{min-height:260px}}
+
+/* impact */
+.stat{text-align:center;padding:20px 14px;background:var(--surface)}
+.stat .ic{width:48px;height:48px;margin:0 auto 10px;border-radius:14px;display:grid;place-items:center;color:#fff;font-size:1.35rem}
+.stat .n{font-family:var(--ff-display);font-size:clamp(1.5rem,6vw,2.05rem);color:var(--pink);font-variant-numeric:tabular-nums}
+.stat .l{font-size:.78rem;color:var(--muted);font-weight:700;margin-top:4px}
+
+/* vmg + values */
+.vmg{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}
+@media (max-width:720px){.vmg{grid-template-columns:1fr}}
+.vmg .card{border-top:6px solid var(--c)}
+.vmg .k{font-family:var(--ff-display);font-size:.8rem;color:var(--c);letter-spacing:.06em;display:flex;align-items:center;gap:8px}
+.vmg .v{font-weight:800;margin-top:6px}
+.value .k{font-family:var(--ff-display);font-size:.9rem;color:var(--pink);display:flex;align-items:center;gap:9px}
+.value .k .sw{width:30px;height:30px;border-radius:9px;background:var(--c);color:#fff;display:grid;place-items:center;font-size:.95rem;flex:0 0 auto}
+.value .v{font-size:.86rem;color:var(--muted);margin-top:8px}
+
+/* quotes */
+.quote{position:relative;background:linear-gradient(135deg,var(--pink),var(--pink-deep));color:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.quote .qimg{height:240px}
+.quote .qimg img{width:100%;height:100%;object-fit:contain;background:rgba(0,0,0,.18)}
+.quote .qbody{padding:22px;position:relative}
+.quote .qmark{font-family:var(--ff-display);font-size:2.4rem;color:var(--lime);line-height:.6;opacity:.9}
+.quote p{font-size:1rem;font-style:italic;margin:6px 0 12px}
+.quote .who{font-family:var(--ff-display);font-size:.84rem;color:var(--lime)}
+.quote .role{font-size:.78rem;color:#ffd9c7}
+
+/* footer */
+footer.foot{background:#160b11;color:#f3e8ee}
+footer.foot .wrap{padding-block:34px}
+footer.foot a{color:var(--orange);font-weight:800;text-decoration:none}
+.foot-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
+.foot .donate{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--lime);color:#243300;font-weight:900;text-decoration:none;padding:12px 20px;border-radius:999px}
+.melkam{font-family:var(--ff-display);color:var(--lime);margin-top:18px;font-size:1.1rem}
+
+#top{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:50;width:46px;height:46px;border-radius:50%;border:none;background:var(--pink);color:#fff;font-size:1.2rem;cursor:pointer;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .25s}
+#top.show{opacity:1;pointer-events:auto}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* ---------- edit mode ---------- */
+.editbtn{display:none;align-items:center;gap:7px;margin-top:10px;align-self:flex-start;font-family:var(--ff-body);font-weight:800;font-size:.82rem;color:#fff;background:var(--pink);border:none;border-radius:999px;padding:9px 16px;cursor:pointer;box-shadow:var(--shadow-sm)}
+.editbtn.show{display:inline-flex}
+.editbtn .ic-svg{font-size:1rem}
+.ed-overlay{position:fixed;inset:0;z-index:200;background:rgba(20,10,18,.55);backdrop-filter:blur(3px);display:none;overflow-y:auto;padding:0}
+.ed-overlay.open{display:block}
+.ed-sheet{max-width:860px;margin:0 auto;min-height:100%;background:var(--bg);box-shadow:var(--shadow)}
+.ed-bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px;padding:14px 18px;background:color-mix(in srgb,var(--surface) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.ed-bar h3{font-family:var(--ff-display);font-weight:400;font-size:1.05rem;margin:0}
+.ed-bar .sp{margin-left:auto}
+.ed-btn{font-family:var(--ff-body);font-weight:800;font-size:.84rem;border-radius:999px;padding:9px 16px;cursor:pointer;border:1.5px solid var(--line);background:var(--surface);color:var(--fg)}
+.ed-btn.primary{background:var(--pink);color:#fff;border-color:var(--pink)}
+.ed-btn.ghost{background:transparent}
+.ed-btn:disabled{opacity:.55;cursor:default}
+.ed-body{padding:16px 18px 60px}
+.ed-hint{font-size:.84rem;color:var(--muted);margin:0 0 16px}
+.ed-day{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:16px;box-shadow:var(--shadow-sm)}
+.ed-day-hd{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.ed-day-hd .num{font-family:var(--ff-display);font-size:1.3rem;color:var(--pink)}
+.ed-field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
+.ed-field label{font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.ed-input{font-family:var(--ff-body);font-size:.92rem;color:var(--fg);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:9px 11px;width:100%}
+.ed-input:focus{outline:2px solid var(--cyan);outline-offset:1px;border-color:var(--cyan)}
+.ed-rows{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.ed-row{display:grid;grid-template-columns:96px 1fr 30px;gap:8px;align-items:start;padding:10px;border:1px dashed var(--line);border-radius:12px;background:var(--bg)}
+.ed-row .full{grid-column:1 / -1}
+.ed-row .ed-input{font-size:.86rem;padding:7px 9px}
+.ed-xrow{border:none;background:transparent;color:var(--pink);font-size:1.3rem;line-height:1;cursor:pointer;padding:0;align-self:center}
+.ed-mini{font-family:var(--ff-body);font-weight:800;font-size:.78rem;border:1.5px dashed var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:6px 12px;cursor:pointer;margin-top:10px}
+.ed-day-foot{display:flex;justify-content:space-between;align-items:center;margin-top:10px;gap:10px;flex-wrap:wrap}
+.ed-del{font-family:var(--ff-body);font-weight:800;font-size:.78rem;border:none;background:transparent;color:#b32249;cursor:pointer;opacity:.8}
+.ed-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:300;background:#160b11;color:#fff;font-weight:700;font-size:.88rem;padding:12px 20px;border-radius:999px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .25s}
+.ed-toast.show{opacity:1}
+.ed-toast.warn{background:#8d1a3a}
+@media (max-width:520px){.ed-row{grid-template-columns:72px 1fr 26px}}
+
+@media print{
+  header.bar,.daynav,#top,.cta,.tbtn{display:none!important}
+  body{background:#fff;color:#000}
+  .section{padding-block:14px}
+  /* keep 4-up grids from overflowing the paper and clipping content */
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g2>*,.g3>*,.g4>*,.facts>*{min-width:0}
+  .stat{padding:16px 10px}
+  .stat .n{font-size:1.5rem}
+  .keep,.section-head{break-inside:avoid;page-break-inside:avoid}
+  h1,h2,h3,.eyebrow,.cobrand-label,.lede,.section-head{break-after:avoid;page-break-after:avoid}
+  .day,.card,.stat,.quote,.policy,.water,.gallery figure,.mapfig,.fact,.cfact,.value,.vmg .card,.phrase,.drow,.stop,.cobrand{break-inside:avoid}
+  .day-photo,.day-top{break-after:avoid}
+  .sched tr{break-inside:avoid}
+  .route,.dbar,.facts,.gallery{break-inside:auto}
+  img{break-inside:avoid}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap bar-in">
+    <span class="brand brandlogos"><img src="assets/logo_lyl.png" alt="Lightyear Leadership"><span class="bdiv"></span><img src="assets/logo_i1d.png" alt="Imagine1day"></span>
+    <nav class="top">
+      <a href="#journey" class="hideSm">Journey</a>
+      <a href="#days">Days</a>
+      <a href="#gallery" class="hideSm">Moments</a>
+      <a href="#impact">Impact</a>
+      <button class="tbtn" id="themeBtn" aria-label="Switch light or dark theme" title="Switch theme"></button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <img class="photo-bg" src="assets/hero.jpg" alt="An Ethiopian student smiling with her schoolbooks">
+  <div class="wrap">
+    <div class="eyebrow" data-ic="compass">The LYL Journey</div>
+    <h1>ETHIOPIA</h1>
+    <div class="yr">2026</div>
+    <div style="display:flex;justify-content:center;margin-top:18px"><div class="cobrand"><img src="assets/logo_lyl.png" alt="Lightyear Leadership"><span class="div"></span><img src="assets/logo_i1d.png" alt="Imagine1day"></div></div>
+    <div class="dates">12 – 23 NOVEMBER 2026</div>
+    <div class="chips">
+      <span class="chip" data-ic="pin">Addis Ababa</span><span class="chip" data-ic="pin">Bishoftu</span>
+      <span class="chip" data-ic="pin">Hawassa</span><span class="chip" data-ic="pin">Dilla</span>
+    </div>
+    <div class="tagline">Learn, lead, and celebrate together.</div>
+    <div class="cta">
+      <a class="btn btn-solid" href="#days" data-ic="calendar">View the days</a>
+      <a class="btn btn-ghost" href="#impact" data-ic="star">Our impact</a>
+    </div>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<section class="section" id="journey">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-ic="flag">Welcome to Ethiopia</div>
+      <h2>Twelve days, one team, one celebration</h2>
+    </div>
+    <p class="lede">The Lightyear leadership group (LYL) travels to Ethiopia alongside Imagine1day to learn, lead, and celebrate together. The team gathers in Addis Ababa, trains at Bishoftu, then journeys south to Hawassa and Dilla to inaugurate the Konga School — closing with the Great Ethiopian Run back in the capital.</p>
+    <p class="lede" style="margin-top:10px">Tap a hotel for its website, or a travel leg for directions. Times are a planning guide and may shift on the ground — your team leads will confirm details each day.</p>
+    <div class="facts" id="facts"></div>
+
+    <div class="section-head" style="margin-top:36px">
+      <div class="eyebrow" data-ic="map">The route</div>
+      <h2>Where the journey goes</h2>
+    </div>
+    <div class="route" id="routeMap"></div>
+
+    <div class="grid g2" style="margin-top:30px;align-items:start">
+      <div class="card">
+        <div class="eyebrow" data-ic="car" style="color:var(--orange-deep)">On the road</div>
+        <p style="font-size:.84rem;color:var(--muted);margin:8px 0 14px">Main driving legs between stops.</p>
+        <div class="dbar" id="dbar"></div>
+      </div>
+      <div class="card">
+        <div class="eyebrow" data-ic="calendar">How the days break down</div>
+        <p style="font-size:.84rem;color:var(--muted);margin:8px 0 14px">Twelve days, four chapters.</p>
+        <div class="mixbar" id="mixbar"></div>
+        <div class="mixleg" id="mixleg"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAY NAV -->
+<div class="daynav" id="daynav"><div class="wrap"><div class="daynav-in" id="daynavIn"></div></div></div>
+
+<!-- DAYS -->
+<section class="section" id="days">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow" data-ic="calendar">Day by day</div><h2>Your itinerary</h2></div>
+    <div class="days" id="daysWrap"></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section band" id="gallery" style="border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow" data-ic="camera">Moments &amp; places</div><h2>What you'll see</h2>
+      <p class="lede">From Bishoftu and the shores of Lake Hawassa to the schools and communities at the heart of the mission.</p></div>
+    <div class="gallery" id="gallery-grid"></div>
+  </div>
+</section>
+
+<!-- WATER CALLOUT -->
+<section class="section" id="water">
+  <div class="wrap">
+    <div class="water">
+      <div class="pic" style="background-image:url(assets/water.jpg)"></div>
+      <div class="txt">
+        <div class="eyebrow" data-ic="water" style="color:var(--lime)">Water is life</div>
+        <div class="big">532,400+</div>
+        <p style="margin:8px 0 0;font-weight:700">people reached with safe, durable water &amp; sanitation — and 165 water points built. Clean water near home means more children in class, especially girls.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREPARE -->
+<section class="section band" id="prepare" style="border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow" data-ic="backpack">Before you go</div><h2>Prepare for the trip</h2>
+      <p class="lede">A recommended packing list, your in-country safety contact, and the policies to review before we travel.</p></div>
+    <div class="grid g4 pack" id="pack"></div>
+    <div class="grid g2" style="margin-top:16px">
+      <div class="card safety">
+        <div class="k" data-ic="shield">Country safety &amp; security</div>
+        <div style="font-family:var(--ff-display);font-size:1.1rem;margin:8px 0 10px">Thomas Kebede</div>
+        <div class="copy" style="margin-bottom:8px"><span class="sel">tkebede@imagine1day.org</span><button class="copybtn" data-copy="tkebede@imagine1day.org">Copy</button></div>
+        <div class="copy"><span class="sel">+251 91 211 5428</span><button class="copybtn" data-copy="+251912115428">Copy</button></div>
+      </div>
+      <div class="card">
+        <div class="eyebrow" data-ic="shield">Trip policies</div>
+        <p style="font-size:.86rem;color:var(--muted);margin:6px 0 0">Please read these before we travel.</p>
+        <div class="policies" id="policies"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMHARIC -->
+<section class="section" id="amharic">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow" data-ic="chat">Learn Amharic</div><h2>A few words for the road</h2>
+      <p class="lede">Ethiopia's official language is Amharic. A greeting goes a long way — here are a handful to try.</p></div>
+    <div class="grid g3" id="phrases"></div>
+  </div>
+</section>
+
+<!-- COUNTRY -->
+<section class="section band" id="country" style="border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow" data-ic="globe">Country info</div><h2>Ethiopia at a glance</h2>
+      <p class="lede">Land of origins and diversity — the only country in Africa never colonized.</p></div>
+    <div class="grid g3" id="countryFacts" style="margin-bottom:18px"></div>
+    <figure class="mapfig"><img src="assets/ethiopia_map.jpg" alt="Map of Ethiopia with its regions and key facts" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section class="section band-pink" id="impact">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow" data-ic="star">19+ years of impact</div><h2>What this work has built</h2>
+      <p class="lede">Imagine1day leverages the power of education to transform a nation. The journey you're on is part of this story.</p></div>
+    <div class="grid g4" id="stats"></div>
+  </div>
+</section>
+
+<!-- VMG + VALUES -->
+<section class="section" id="vmg">
+  <div class="wrap">
+    <div class="keep"><div class="section-head"><div class="eyebrow" data-ic="compass">Why we go</div><h2>Vision, mission &amp; goal</h2></div>
+    <div class="vmg" id="vmgGrid"></div></div>
+    <div class="keep" style="margin-top:34px"><div class="section-head"><div class="eyebrow" data-ic="shield">How we work</div><h2>Four pillars of intervention</h2></div>
+    <div class="grid g4" id="pillars"></div></div>
+    <div class="keep" style="margin-top:36px"><div class="section-head"><div class="eyebrow" data-ic="heart">What we stand for</div><h2>Core values</h2></div>
+    <div class="grid g2" id="values"></div></div>
+  </div>
+</section>
+
+<!-- VOICES -->
+<section class="section band" id="voices" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow" data-ic="quote">Voices</div><h2>Why it matters</h2></div>
+    <div class="grid g2">
+      <div class="quote">
+        <div class="qimg"><img src="assets/student_urji.jpg" alt="Urji Hamsalu, a student"></div>
+        <div class="qbody"><div class="qmark">“</div>
+          <p>Now, thanks to the life-skills sessions, I feel confident enough to speak out and share my thoughts with no fear. I believe anyone can change.</p>
+          <div class="who">Urji Hamsalu</div><div class="role">11-year-old, 5th grade · Oromia region</div></div>
+      </div>
+      <div class="quote" style="background:linear-gradient(135deg,var(--cyan-deep),#17565a)">
+        <div class="qimg"><img src="assets/student_write.jpg" alt="Umer Mehammed"></div>
+        <div class="qbody"><div class="qmark" style="color:var(--lime)">“</div>
+          <p>The day I walked into school and sat in a classroom again, I felt like a human being. One day, I will become a teacher and help children who think their dreams are over.</p>
+          <div class="who">Umer Mehammed</div><div class="role">Student · Educate A Girl / Accelerated Education Program (AEP)</div></div>
+      </div>
+    </div>
+    <p style="margin-top:22px"><a class="linkcell" target="_blank" rel="noopener" href="https://imagine1day.org/stories/">To read more stories<span class="ext" aria-hidden="true"> ↗</span></a></p>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="cobrand-label">In partnership</div>
+    <div class="cobrand" style="margin-bottom:24px"><img src="assets/logo_lyl.png" alt="Lightyear Leadership"><span class="div"></span><img src="assets/logo_i1d.png" alt="Imagine1day"></div>
+    <div class="foot-links">
+      <a target="_blank" rel="noopener" href="https://imagine1day.org/">imagine1day.org ↗</a>
+      <a target="_blank" rel="noopener" href="https://linktr.ee/imagine1day.org">All our channels ↗</a>
+    </div>
+    <a class="donate" target="_blank" rel="noopener" href="https://give-can.keela.co/embed/3ErwrdRtybCG749WS" data-ic="heart">Support the mission</a>
+    <div class="melkam">Melkam guzo — have a wonderful journey.</div>
+  </div>
+</footer>
+
+<button id="top" aria-label="Back to top">↑</button>
+
+<!--DATA_START--><script type="application/json" id="lyldata">{"DAYS":[{"n":"01","date":"Thursday, 12 November 2026","short":"Thu 12","theme":"Arrival · Addis Ababa → Bishoftu","badge":"Arrival","bi":"flag","c":"pink","intro":"The North America LYL team arrives in Addis Ababa, visits the Imagine1day Country Office, then travels to Bishoftu to begin training preparation.","note":"Arrival times are confirmed individually — a shuttle and I1D team will meet each flight.","rows":[["Morning","International flight arrivals — North America LYL team","Bole Int’l Airport"],["9:00 AM","Breakfast",{"t":"Skylight Hotel","u":"https://www.ethiopianskylighthotel.com/"}],["9:30 AM","Visit the Imagine1day Country Office",{"t":"Imagine1day Country Office","u":"https://maps.app.goo.gl/G7ZXgMXwC6AcbM6m8"}],["10:00–11:00 AM","Drive to Bishoftu (about 1 hour)",{"t":"Bishoftu road","u":"https://www.google.com/maps/dir/?api=1&origin=Addis%20Ababa%2C%20Ethiopia&destination=Bishoftu%2C%20Ethiopia&travelmode=driving"}],["11:30 AM–12:30 PM","Preparation for the training with the production team",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["12:30–2:00 PM","Lunch",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["2:00 PM","Check in at Noora Resort",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["2:00–4:30 PM","Preparation for the training",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["4:30–6:00 PM","Personal time",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["6:00–8:00 PM","Dinner reception",{"t":"Noora Resort","u":"https://nooraresort.com/"}]]},{"n":"02","date":"Friday, 13 November 2026","short":"Fri 13","theme":"Training preparation · Bishoftu","badge":"Prep","bi":"chart","c":"orange","intro":"A full day at Bishoftu preparing for the leadership training with the production team.","rows":[["8:00 AM","Breakfast",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["9:00 AM–12:30 PM","Preparation for the training",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["12:30–2:00 PM","Lunch",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["2:00–4:30 PM","Preparation for the training",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["4:30–6:00 PM","Personal time",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["6:00–8:00 PM","Dinner reception",{"t":"Noora Resort","u":"https://nooraresort.com/"}]]},{"n":"03","date":"Saturday, 14 November 2026","short":"Sat 14","theme":"Training begins · Bishoftu","badge":"Training","bi":"chart","c":"lime","intro":"The first full training day opens with the “Begin with Integrity” session.","rows":[["7:00 AM","Breakfast",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["8:30 AM","Opening session — Begin with Integrity (tea break mid-morning)",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["12:30 PM","Lunch",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["2:00 PM","Afternoon training sessions (tea break mid-afternoon)",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["6:00 PM","Dinner",{"t":"Noora Resort","u":"https://nooraresort.com/"}]]},{"n":"04","date":"Sunday, 15 November 2026","short":"Sun 15","theme":"Training continues · Bishoftu","badge":"Training","bi":"chart","c":"lime","rows":[["7:00 AM","Breakfast",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["8:30 AM","Morning training sessions (tea break mid-morning)",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["12:30 PM","Lunch",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["2:00 PM","Afternoon training sessions (tea break mid-afternoon)",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["6:00 PM","Dinner",{"t":"Noora Resort","u":"https://nooraresort.com/"}]]},{"n":"05","date":"Monday, 16 November 2026","short":"Mon 16","theme":"Training continues · Bishoftu","badge":"Training","bi":"chart","c":"lime","rows":[["7:00 AM","Breakfast",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["8:30 AM","Morning training sessions (tea break mid-morning)",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["12:30 PM","Lunch",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["2:00 PM","Afternoon training sessions (tea break mid-afternoon)",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["6:00 PM","Dinner",{"t":"Noora Resort","u":"https://nooraresort.com/"}]]},{"n":"06","date":"Tuesday, 17 November 2026","short":"Tue 17","theme":"Reflection & appreciation · Bishoftu","badge":"Reflect","bi":"people","c":"cyan","rows":[["8:30 AM","Breakfast",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["9:30 AM","Reflection on the sessions & appreciation with the production team",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["12:30 PM","Lunch",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["2:00 PM","Meeting with the Imagine1day leadership team",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["4:00 PM","Personal time",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["6:00 PM","Team dinner",{"t":"Noora Resort","u":"https://nooraresort.com/"}]]},{"n":"07","date":"Wednesday, 18 November 2026","short":"Wed 18","theme":"Travel to Hawassa","badge":"Travel","bi":"car","c":"orange","rows":[["7:00 AM","Breakfast",{"t":"Noora Resort","u":"https://nooraresort.com/"}],["8:30 AM","Drive to Hawassa — 230 km (about 4 hours)",{"t":"Hawassa road","u":"https://www.google.com/maps/dir/?api=1&origin=Bishoftu%2C%20Ethiopia&destination=Hawassa%2C%20Ethiopia&travelmode=driving"}],["12:30 PM","Lunch",{"t":"Haile Resort, Hawassa","u":"https://hailehotelsandresorts.com/"}],["2:30 PM - 5:00 PM","Boat ride on Lake Hawassa — hippos & a visit to Amora Gedel Park",{"t":"Amora Gedel Park","u":"https://www.google.com/maps/search/?api=1&query=Amora%20Gedel%20Park%20Hawassa"}],["5:00 PM","Personal time",{"t":"Haile Resort, Hawassa","u":"https://hailehotelsandresorts.com/"}],["6:30 PM","Dinner",{"t":"Haile Resort, Hawassa","u":"https://hailehotelsandresorts.com/"}]]},{"n":"08","date":"Thursday, 19 November 2026","short":"Thu 19","theme":"Konga School inauguration · Dilla","badge":"Highlight","bi":"star","c":"pink","photo":"assets/konga1.jpg","pcap":"Konga School, Dilla","intro":"A highlight of the journey — the team inaugurates the Konga School and celebrates with the community.","rows":[["7:00 AM","Breakfast",{"t":"Haile Resort, Hawassa","u":"https://hailehotelsandresorts.com/"}],["8:00 AM","Drive to Konga School — inauguration & community activities",{"t":"Konga School Road","u":"https://maps.app.goo.gl/k9CcLvqw6jvRrwZo7"}],["4:00 PM","Drive back to Dilla Town",{"t":"Dilla Town Road","u":"https://maps.app.goo.gl/Avs3Un8V5zPds4TUA"}],["5:00 PM","Personal time",{"t":"Ayele Degu Hotel","u":"https://ayeledeguinthotel.com/"}],["6:30 PM","Dinner",{"t":"Ayele Degu Hotel","u":"https://ayeledeguinthotel.com/"}]]},{"n":"09","date":"Friday, 20 November 2026","short":"Fri 20","theme":"Drive to Hawassa","badge":"Lakeside","bi":"water","c":"cyan","rows":[["8:00 AM","Breakfast",{"t":"Ayele Degu Hotel","u":"https://ayeledeguinthotel.com/"}],["9:00 AM","Drive to Hawassa — 85 km (about 1 hour)",{"t":"Hawassa road","u":"https://www.google.com/maps/dir/?api=1&origin=Dilla%2C%20Ethiopia&destination=Hawassa%2C%20Ethiopia&travelmode=driving"}],["10:00 AM","Check in at Haile Resort",{"t":"Haile Resort, Hawassa","u":"https://hailehotelsandresorts.com/"}],["12:30 PM","Lunch",{"t":"Haile Resort","u":"https://hailehotelsandresorts.com/"}],["2:30 PM","Personal time / optional activities",{"t":"Haile Resort","u":"https://hailehotelsandresorts.com/"}],["6:30 PM","Dinner",{"t":"Haile Resort","u":"https://hailehotelsandresorts.com/"}]]},{"n":"10","date":"Saturday, 21 November 2026","short":"Sat 21","theme":"Wabe Gefersa School, inauguration & community activities","badge":"Fly","bi":"plane","c":"orange","rows":[["7:00 AM","Breakfast",{"t":"Haile Resort, Hawassa","u":"https://hailehotelsandresorts.com/"}],["8:00 AM","Drive to Wabe Gefersa School, inauguration & community activities",{"t":"Wabe Gefersa School, Road","u":"https://maps.app.goo.gl/gy5iAZHBvTLUsLyJ7"}],["4:00 PM","Drive to Hawassa",{"t":"Hawassa Airport Road","u":"https://maps.app.goo.gl/p5YSdw8E9MZdfsCV8"}],["6:00 PM","Fligh to Addis Ababa","Bole Int’l Airport"],["7:00 PM","Check in Skylight Hotel",{"t":"Skylight Hotel","u":"https://www.ethiopianskylighthotel.com/"}],["8:30 PM ","Dinner reception",{"t":"Skylight Hotel","u":"https://www.ethiopianskylighthotel.com/"}]],"intro":"Wabe Gefersa School inauguration"},{"n":"11","date":"Sunday, 22 November 2026","short":"Sun 22","theme":"The Great Ethiopian Run","badge":"Finale","bi":"run","c":"pink","rows":[["6:30 AM","Breakfast, then walk to Meskel Square",{"t":"Meskel Square Map","u":"https://maps.app.goo.gl/efJ6eskXS3n5bHMC7"}],["8:00 AM","2026 Great Ethiopian Run / Walk — for fun","Addis Ababa"],["12:30 PM","Celebration lunch",{"t":"Chanoly Noodles","u":"https://maps.app.goo.gl/ANQ2Gn6DkrWrrZFF6"}],["Afternoon","Personal time and rest",{"t":"Skylight Hotel","u":"https://www.ethiopianskylighthotel.com/"}],["7:00 PM","Dinner at Hyatt Regency",{"t":"Hyatt Regency","u":"https://www.hyatt.com/hyatt-regency/en-US/addra-hyatt-regency-addis-ababa"}]]},{"n":"12","date":"Manday, 23 November 2026","short":"Day","theme":"Meeting with Imagine1day Management Team","badge":"Day","bi":"calendar","c":"pink","rows":[["8:30 AM","Breakfast ","Skylight Hotel"],["9:30 AM","Training Session - Imagine1day Management Team",{"t":"Imagine1day Country Office","u":"https://maps.app.goo.gl/zKFcygaN6qFm5BQM6"}],["12:30 PM","Lunch and Coffee time with Imagine1day Team","Imagine1day Country Office - Community Hall"],["8:00 PM","Training Session - Imagine1day Management Team","Imagine1day Country Office - Community Hall"],["6:30 PM","Dinner","TBD"],["9:30 PM","Pack and Ready to Flight","Bole Int’l Airport"]]}]}</script><!--DATA_END-->
+
+<script>
+(function(){
+  "use strict";
+  /* capture pristine source for self-republish BEFORE any DOM mutation */
+  var ORIGINAL_DOC="<!doctype html>"+document.documentElement.outerHTML;
+  /* ---------- icons ---------- */
+  var P='<svg class="ic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">';
+  var F='<svg class="ic-svg" viewBox="0 0 24 24" fill="currentColor">';
+  var ICON={
+   compass:P+'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11z"/></svg>',
+   pin:P+'<path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+   map:P+'<path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg>',
+   calendar:P+'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>',
+   car:P+'<path d="M3 13l2-5a2 2 0 0 1 1.9-1.3h10.2A2 2 0 0 1 19 8l2 5"/><path d="M3 13h18v4H3z"/><circle cx="7" cy="17.5" r="1.4"/><circle cx="17" cy="17.5" r="1.4"/></svg>',
+   plane:P+'<path d="M10.5 3.2 12 10l8 3v2l-8-2 .4 4L15 19v1.6L12 19.6 9 20.6V19l2.6-2L12 13l-8 2v-2l8-3 1.5-6.8a1.1 1.1 0 0 1 2 0Z" transform="rotate(42 12 12)"/></svg>',
+   flag:P+'<path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>',
+   camera:P+'<path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.4"/></svg>',
+   backpack:P+'<path d="M6 9a6 6 0 0 1 12 0v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M9 9a3 3 0 0 1 6 0"/><path d="M6 13.5h12"/><path d="M10 13.5V17h4v-3.5"/></svg>',
+   school:P+'<path d="M3 10.5 12 5l9 5.5"/><path d="M5 10v9h14v-9"/><path d="M10 19v-4h4v4"/><path d="M12 5V3"/></svg>',
+   chart:P+'<path d="M4 19V5M4 19h16"/><path d="M7 15l3.5-4 3 2.5L19 7"/><path d="M19 10V7h-3"/></svg>',
+   grad:P+'<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v4c0 1.4 2.7 3 6 3s6-1.6 6-3v-4"/><path d="M22 9v5"/></svg>',
+   water:F+'<path d="M12 2.4S5 10 5 14.6A7 7 0 0 0 19 14.6C19 10 12 2.4 12 2.4Z"/></svg>',
+   star:F+'<path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 18.6 6.1 20.2l1.2-6.6L2.5 9l6.6-.9z"/></svg>',
+   shield:P+'<path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+   book:P+'<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H12v16h5.5A2.5 2.5 0 0 1 20 21.5z"/></svg>',
+   people:P+'<circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.2a3 3 0 0 1 0 5.6"/><path d="M18 14.2A6 6 0 0 1 21 20"/></svg>',
+   globe:P+'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>',
+   chat:P+'<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-5.4A8 8 0 1 1 21 12Z"/><path d="M8.5 11h7M8.5 14h4"/></svg>',
+   bank:P+'<path d="M12 3 21 8H3z"/><path d="M4 11h16"/><path d="M6 11v7M10 11v7M14 11v7M18 11v7"/><path d="M3.5 20.5h17"/></svg>',
+   coins:P+'<ellipse cx="9" cy="7" rx="5" ry="2.4"/><path d="M4 7v4c0 1.3 2.2 2.4 5 2.4s5-1.1 5-2.4V7"/><path d="M10 15.4c.9.3 2 .5 3.2.5 2.8 0 5-1.1 5-2.4V9"/><path d="M14 11.3c2.5-.2 4.2-1.2 4.2-2.3"/></svg>',
+   shirt:P+'<path d="M8 3 4 6l2 3 2-1.2V20h8V7.8L18 9l2-3-4-3-1.6 1.6a3 3 0 0 1-4.8 0z"/></svg>',
+   boot:P+'<path d="M7 3v8l-3 2v6h16c-.6-2.8-3.4-3.3-5-4.6C13 13 13 11 13 11l-.2-8z"/><path d="M4 17h15"/></svg>',
+   phone:P+'<rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>',
+   heart:F+'<path d="M12 21C7 17 3 13.5 3 9.6A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 9 2.6C21 13.5 17 17 12 21Z"/></svg>',
+   quote:F+'<path d="M10 7H6.5A3.5 3.5 0 0 0 3 10.5V17h7v-7H6.8C7 9 8 8.4 9.4 8.3zM21 7h-3.5A3.5 3.5 0 0 0 14 10.5V17h7v-7h-3.2c.2-1 1.2-1.6 2.6-1.7z"/></svg>',
+   award:P+'<circle cx="12" cy="9" r="5"/><path d="M9 13.3 7 21l5-3 5 3-2-7.7"/></svg>',
+   siren:P+'<path d="M6 18a6 6 0 0 1 12 0z"/><path d="M4 21h16"/><path d="M12 6V3M6.5 8 5 6.5M17.5 8 19 6.5M4 13H2m20 0h-2"/></svg>',
+   run:P+'<circle cx="15" cy="5" r="2"/><path d="M5 20l3-4 3 1 1-5-3-2 4-2 2 3h3"/><path d="M8 11l-3 1"/></svg>',
+   sun:P+'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.5 4.5 6 6M18 18l1.5 1.5M2 12h2M20 12h2M4.5 19.5 6 18M18 6l1.5-1.5"/></svg>',
+   moon:P+'<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>'
+  };
+  function ic(name){return ICON[name]||'';}
+  document.querySelectorAll('[data-ic]').forEach(function(e){e.insertAdjacentHTML('afterbegin',ic(e.getAttribute('data-ic')));});
+
+  /* ---------- links ---------- */
+  var L={sky:"https://www.ethiopianskylighthotel.com/",noora:"https://nooraresort.com/",
+    haile:"https://hailehotelsandresorts.com/",saron:"https://saronlodge.com/",
+    ayat:"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("Ayat Regency Addis Ababa"),
+    co:"https://maps.app.goo.gl/G7ZXgMXwC6AcbM6m8",entoto:"https://unitypark.et/",konga:"https://maps.app.goo.gl/aZGRqf26CuBpc6BM9",
+    yod:"https://www.tripadvisor.com/Restaurant_Review-g293791-d1477419-Reviews-Yod_Abyssinia_Traditional_Food-Addis_Ababa.html"};
+  function maps(o,d){return "https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(o+", Ethiopia")+"&destination="+encodeURIComponent(d+", Ethiopia")+"&travelmode=driving";}
+  function w(t,u){return u?{t:t,u:u}:t;}
+  var C={pink:"var(--pink)",orange:"var(--orange-deep)",lime:"var(--lime-deep)",cyan:"var(--cyan-deep)"};
+  var CD={pink:"var(--pink-deep)",orange:"#a9590d",lime:"var(--lime-deep)",cyan:"var(--cyan-deep)"};
+
+  /* ---------- facts ---------- */
+  var FACTS=[["calendar","12","Days"],["people","1","Team, together"],["grad","3","Days of training"],["school","2","School openings"]];
+  var fw=document.getElementById("facts");
+  FACTS.forEach(function(f){var c=document.createElement("div");c.className="fact";
+    c.innerHTML='<div class="ic">'+ic(f[0])+'</div><div class="n">'+f[1]+'</div><div class="l">'+f[2]+'</div>';fw.appendChild(c);});
+
+  /* ---------- days ---------- */
+  var DAYS=[
+   {n:"01",date:"Thursday, 12 November 2026",short:"Thu 12",theme:"Arrival · Addis Ababa → Bishoftu",badge:"Arrival",bi:"flag",c:"pink",
+    intro:"The North America LYL team arrives in Addis Ababa, visits the Imagine1day Country Office, then travels to Bishoftu to begin training preparation.",
+    note:"Arrival times are confirmed individually — a shuttle and I1D team will meet each flight.",
+    rows:[["Morning","International flight arrivals — North America LYL team","Bole Int’l Airport"],
+     ["9:00 AM","Breakfast",w("Skylight Hotel",L.sky)],
+     ["9:30 AM","Visit the Imagine1day Country Office",w("I1D Office",L.co)],
+     ["10:00–11:00 AM","Drive to Bishoftu (about 1 hour)",w("Bishoftu road",maps("Addis Ababa","Bishoftu"))],
+     ["11:30 AM–12:30 PM","Preparation for the training with the production team",w("Noora Resort",L.noora)],
+     ["12:30–2:00 PM","Lunch",w("Noora Resort",L.noora)],
+     ["After lunch","Check in at Noora Resort",w("Noora Resort",L.noora)],
+     ["2:00–4:30 PM","Preparation for the training",w("Noora Resort",L.noora)],
+     ["4:30–6:00 PM","Personal time",w("Noora Resort",L.noora)],
+     ["6:00–8:00 PM","Dinner reception",w("Noora Resort",L.noora)]]},
+   {n:"02",date:"Friday, 13 November 2026",short:"Fri 13",theme:"Training preparation · Bishoftu",badge:"Prep",bi:"chart",c:"orange",
+    intro:"A full day at Bishoftu preparing for the leadership training with the production team.",
+    rows:[["8:00 AM","Breakfast",w("Noora Resort",L.noora)],
+     ["9:00 AM–12:30 PM","Preparation for the training",w("Noora Resort",L.noora)],
+     ["12:30–2:00 PM","Lunch",w("Noora Resort",L.noora)],
+     ["2:00–4:30 PM","Preparation for the training",w("Noora Resort",L.noora)],
+     ["4:30–6:00 PM","Personal time",w("Noora Resort",L.noora)],
+     ["6:00–8:00 PM","Dinner reception",w("Noora Resort",L.noora)]]},
+   {n:"03",date:"Saturday, 14 November 2026",short:"Sat 14",theme:"Training begins · Bishoftu",badge:"Training",bi:"chart",c:"lime",
+    intro:"The first full training day opens with the “Begin with Integrity” session.",
+    rows:[["7:00 AM","Breakfast",w("Noora Resort",L.noora)],
+     ["8:30 AM","Opening session — Begin with Integrity (tea break mid-morning)",w("Noora Resort",L.noora)],
+     ["12:30 PM","Lunch",w("Noora Resort",L.noora)],
+     ["2:00 PM","Afternoon training sessions (tea break mid-afternoon)",w("Noora Resort",L.noora)],
+     ["6:00 PM","Dinner",w("Noora Resort",L.noora)]]},
+   {n:"04",date:"Sunday, 15 November 2026",short:"Sun 15",theme:"Training continues · Bishoftu",badge:"Training",bi:"chart",c:"lime",
+    rows:[["7:00 AM","Breakfast",w("Noora Resort",L.noora)],
+     ["8:30 AM","Morning training sessions (tea break mid-morning)",w("Noora Resort",L.noora)],
+     ["12:30 PM","Lunch",w("Noora Resort",L.noora)],
+     ["2:00 PM","Afternoon training sessions (tea break mid-afternoon)",w("Noora Resort",L.noora)],
+     ["6:00 PM","Dinner",w("Noora Resort",L.noora)]]},
+   {n:"05",date:"Monday, 16 November 2026",short:"Mon 16",theme:"Training continues · Bishoftu",badge:"Training",bi:"chart",c:"lime",
+    rows:[["7:00 AM","Breakfast",w("Noora Resort",L.noora)],
+     ["8:30 AM","Morning training sessions (tea break mid-morning)",w("Noora Resort",L.noora)],
+     ["12:30 PM","Lunch",w("Noora Resort",L.noora)],
+     ["2:00 PM","Afternoon training sessions (tea break mid-afternoon)",w("Noora Resort",L.noora)],
+     ["6:00 PM","Dinner",w("Noora Resort",L.noora)]]},
+   {n:"06",date:"Tuesday, 17 November 2026",short:"Tue 17",theme:"Reflection & appreciation · Bishoftu",badge:"Reflect",bi:"people",c:"cyan",
+    rows:[["8:30 AM","Breakfast",w("Noora Resort",L.noora)],
+     ["9:30 AM","Reflection on the sessions & appreciation with the production team",w("Noora Resort",L.noora)],
+     ["12:30 PM","Lunch",w("Noora Resort",L.noora)],
+     ["2:00 PM","Meeting with the Imagine1day leadership team",w("Noora Resort",L.noora)],
+     ["4:00 PM","Personal time",w("Noora Resort",L.noora)],
+     ["6:00 PM","Team dinner",w("Noora Resort",L.noora)]]},
+   {n:"07",date:"Wednesday, 18 November 2026",short:"Wed 18",theme:"Travel to Hawassa & Dilla",badge:"Travel",bi:"car",c:"orange",
+    rows:[["7:00 AM","Breakfast",w("Noora Resort",L.noora)],
+     ["8:30 AM","Drive to Hawassa — 230 km (about 4 hours)",w("Hawassa road",maps("Bishoftu","Hawassa"))],
+     ["12:30 PM","Lunch",w("Haile Resort, Hawassa",L.haile)],
+     ["After lunch","Boat ride on Lake Hawassa — hippos & a visit to Amora Gedel Park",w("Amora Gedel Park","https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("Amora Gedel Park Hawassa"))],
+     ["2:30 PM","Drive to Dilla — 85 km (about 1 hour)",w("Dilla road",maps("Hawassa","Dilla"))],
+     ["3:30 PM","Check in at Saron Lodge",w("Saron Lodge",L.saron)],
+     ["4:00 PM","Personal time",w("Saron Lodge",L.saron)],
+     ["6:30 PM","Dinner",w("Saron Lodge",L.saron)]]},
+   {n:"08",date:"Thursday, 19 November 2026",short:"Thu 19",theme:"Konga School inauguration · Dilla",badge:"Highlight",bi:"star",c:"pink",
+    photo:"assets/konga1.jpg",pcap:"Konga School, Dilla",
+    intro:"A highlight of the journey — the team inaugurates the Konga School and celebrates with the community.",
+    rows:[["7:00 AM","Breakfast",w("Saron Lodge",L.saron)],
+     ["8:00 AM","Drive to Konga School — inauguration & community activities",w("Konga School",L.konga)],
+     ["4:00 PM","Drive back to Saron Lodge",w("Saron Lodge",L.saron)],
+     ["5:00 PM","Personal time",w("Saron Lodge",L.saron)],
+     ["6:30 PM","Dinner",w("Saron Lodge",L.saron)]]},
+   {n:"09",date:"Friday, 20 November 2026",short:"Fri 20",theme:"Drive to Hawassa",badge:"Lakeside",bi:"water",c:"cyan",
+    rows:[["8:00 AM","Breakfast",w("Saron Lodge",L.saron)],
+     ["9:00 AM","Drive to Hawassa — 85 km (about 1 hour)",w("Hawassa road",maps("Dilla","Hawassa"))],
+     ["10:00 AM","Check in at Haile Resort",w("Haile Resort, Hawassa",L.haile)],
+     ["12:30 PM","Lunch",w("Haile Resort",L.haile)],
+     ["2:30 PM","Personal time / optional activities",w("Haile Resort",L.haile)],
+     ["6:30 PM","Dinner",w("Haile Resort",L.haile)]]},
+   {n:"10",date:"Saturday, 21 November 2026",short:"Sat 21",theme:"Fly to Addis Ababa & rest",badge:"Fly",bi:"plane",c:"orange",
+    rows:[["7:00 AM","Breakfast",w("Haile Resort, Hawassa",L.haile)],
+     ["8:30 AM","Check out and flight to Addis Ababa","Hawassa Airport"],
+     ["Afternoon","Rest and prepare for the Great Ethiopian Run",w("Ayat Regency, Addis Ababa",L.ayat)],
+     ["6:30 PM","Dinner",w("Ayat Regency",L.ayat)]]},
+   {n:"11",date:"Sunday, 22 November 2026",short:"Sun 22",theme:"The Great Ethiopian Run & farewell",badge:"Finale",bi:"run",c:"pink",
+    rows:[["6:30 AM","Breakfast, then walk to Meskel Square","Meskel Square"],
+     ["8:00 AM","2026 Great Ethiopian Run / Walk — for fun","Addis Ababa"],
+     ["11:30 AM","Celebration lunch","Chanoly Noodles"],
+     ["Afternoon","Personal time — rest and pack",w("Ayat Regency",L.ayat)],
+     ["6:00 PM","Farewell dinner at a traditional restaurant",w("Yod Abyssinia",L.yod)],
+     ["Evening","Depart for Bole International Airport — safe travels home","Bole Int’l"]]}
+  ];
+  /* saved edits override the defaults above */
+  try{var _dd=document.getElementById("lyldata");if(_dd&&_dd.textContent.trim()){var _pj=JSON.parse(_dd.textContent);if(_pj&&_pj.DAYS&&_pj.DAYS.length)DAYS=_pj.DAYS;}}catch(e){}
+  function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
+  function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+  function whereHTML(v){return (v&&typeof v==="object")?'<a class="linkcell" target="_blank" rel="noopener" href="'+v.u+'">'+esc(v.t)+'<span class="ext" aria-hidden="true">↗</span></a>':esc(v);}
+
+  var daysWrap=document.getElementById("daysWrap"),navIn=document.getElementById("daynavIn");
+  DAYS.forEach(function(d){
+    var day=el("div","day");day.id="day-"+d.n;
+    day.style.setProperty("--c",C[d.c]);day.style.setProperty("--c-deep",CD[d.c]);
+    if(d.photo) day.appendChild(el("div","day-photo",'<img src="'+d.photo+'" alt="'+esc(d.pcap||"")+'" loading="lazy"><span class="cap">'+esc(d.pcap||"")+'</span>'));
+    var top=el("div","day-top");
+    top.innerHTML='<div class="day-num">'+d.n+'<small>DAY</small></div><div class="day-h"><span class="day-date">'+esc(d.date)+'</span><span class="day-theme">'+esc(d.theme)+'</span></div><span class="day-badge">'+ic(d.bi)+esc(d.badge)+'</span>';
+    day.appendChild(top);
+    if(d.intro) day.appendChild(el("div","day-intro",esc(d.intro)));
+    var tbl=el("table","sched");var b="<tr><th>Time</th><th>Activity</th><th>Where</th></tr>";
+    d.rows.forEach(function(r){b+="<tr><td class='t'>"+esc(r[0])+"</td><td>"+esc(r[1])+"</td><td class='w'>"+whereHTML(r[2])+"</td></tr>";});
+    tbl.innerHTML=b;day.appendChild(tbl);
+    if(d.note) day.appendChild(el("div","day-note",esc(d.note)));
+    daysWrap.appendChild(day);
+    var pill=el("a","daypill");pill.href="#day-"+d.n;pill.id="pill-"+d.n;pill.innerHTML=d.n+' <b>'+esc(d.short)+'</b>';
+    pill.addEventListener("click",function(e){e.preventDefault();document.getElementById("day-"+d.n).scrollIntoView({behavior:"smooth",block:"start"});});
+    navIn.appendChild(pill);
+  });
+
+  /* ---------- route ---------- */
+  var ROUTE=[["Addis Ababa","Arrive & welcome · Day 1","pink"],["Bishoftu","Leadership training · Days 2–6","lime"],
+   ["Hawassa","Transit south · Day 7","orange"],["Dilla — Konga School","Inauguration · Days 7–8","pink"],
+   ["Hawassa","Lakeside · Day 9","cyan"],["Addis Ababa","Great Ethiopian Run · Days 10–11","pink"]];
+  var rm=document.getElementById("routeMap");
+  ROUTE.forEach(function(s,i){var nx=ROUTE[i+1];var st=el("div","stop");
+    st.style.setProperty("--c",C[s[2]]); if(nx)st.style.setProperty("--cN",C[nx[2]]);
+    st.innerHTML='<div class="rail"><span class="node">'+ic("pin")+'</span><span class="line"></span></div><div class="body"><div class="place">'+esc(s[0])+'</div><div class="meta">'+esc(s[1])+'</div></div>';
+    rm.appendChild(st);});
+
+  /* ---------- distance bars ---------- */
+  var DIST=[["Addis → Bishoftu",45,"orange"],["Bishoftu → Hawassa",230,"orange"],["Hawassa → Dilla",85,"orange"],["Dilla → Hawassa",85,"cyan"]];
+  var mx=230,db=document.getElementById("dbar");
+  DIST.forEach(function(d){var row=el("div","drow");
+    row.innerHTML='<span class="dl">'+esc(d[0])+'</span><span class="dt"><span class="df" style="width:'+(d[1]/mx*100)+'%;background:'+C[d[2]]+'"></span></span><span class="dv">'+d[1]+' km</span>';
+    db.appendChild(row);});
+
+  /* ---------- day-type mix ---------- */
+  var MIX=[["Addis & arrival",1,"pink"],["Bishoftu training",5,"lime"],["South & schools",3,"orange"],["Celebration & run",3,"cyan"]];
+  var tot=12,mb=document.getElementById("mixbar"),ml=document.getElementById("mixleg");
+  MIX.forEach(function(m){var s=document.createElement("span");s.style.width=(m[1]/tot*100)+"%";s.style.background=C[m[2]];s.title=m[0];mb.appendChild(s);
+    var lg=el("div",null,'<span class="sw" style="background:'+C[m[2]]+'"></span><span>'+esc(m[0])+' <b>'+m[1]+'</b></span>');ml.appendChild(lg);});
+
+  /* ---------- gallery ---------- */
+  var GAL=[["konga1","Konga School, Dilla"],["konga3","New classrooms"],["konga2","Clean water & WASH facilities"],
+   ["student_write","Walking to school"],["kids_backpacks","The children we serve","wide"]];
+  var gg=document.getElementById("gallery-grid");
+  GAL.forEach(function(g){var f=el("figure",g[2]||null,'<img src="assets/'+g[0]+'.jpg" alt="'+esc(g[1])+'" loading="lazy"><figcaption>'+esc(g[1])+'</figcaption>');gg.appendChild(f);});
+
+  /* ---------- packing ---------- */
+  var PACK=[["shirt","Clothing",["2–3 full-length pants","4–5 shirts","1–2 long-sleeve shirts","1 warm sweater","Pajamas","Hat with a brim"]],
+   ["boot","Footwear",["Sturdy, comfortable running shoes","Socks for the whole trip","Flip-flops / sandals for indoors"]],
+   ["water","Toiletries",["Toothbrush & toothpaste","Deodorant, moisturizer, sunscreen","Bug spray with DEET","Towel & facecloth","Hand-wipes & sanitizer","Biodegradable shampoo & soap"]],
+   ["phone","Other items",["Flashlight","Snacks for long drives","Phone, car charger, power bank","Headphones"]]];
+  var pk=document.getElementById("pack");
+  PACK.forEach(function(p){var c=el("div","card");var li=p[2].map(function(x){return "<li>"+esc(x)+"</li>";}).join("");
+    c.innerHTML='<h3>'+ic(p[0])+esc(p[1])+'</h3><ul>'+li+'</ul>';pk.appendChild(c);});
+
+  /* ---------- policies ---------- */
+  var POL=[["shield","Safety & Security","https://drive.google.com/file/d/10U64y8GtTCu29wFPUFWgYE9rZ0tPN8aB/view?usp=sharing","pink"],
+   ["car","Vehicle & Motor","https://drive.google.com/file/d/1AqmI09iMit7oc7MMdsDWPa_E6mRwSuPs/view?usp=sharing","orange"],
+   ["heart","Safeguarding & Risk","https://drive.google.com/file/d/1RLEs50IBUCpbt3SoCugmO8TJIjnHl4k4/view?usp=sharing","cyan"]];
+  var pol=document.getElementById("policies");
+  POL.forEach(function(p){var a=el("a","policy");a.href=p[2];a.target="_blank";a.rel="noopener";
+    a.innerHTML='<span class="ic" style="background:'+C[p[3]]+'">'+ic(p[0])+'</span>'+esc(p[1]);pol.appendChild(a);});
+
+  /* ---------- phrases ---------- */
+  var PH=[["Hello","ሰላም","selam"],["Thank you","አመሰግናለሁ","ameseginalehu"],["Yes / No","አዎ / አይ","awo / ay"],
+   ["Please","እባክህ","ebakih"],["Excuse me","ይቅርታ","yiqirta"],["How are you?","እንደምን ነህ?","endemen neh?"],
+   ["How much?","ስንት ነው?","sint new?"],["Coffee","ቡና","buna"],["Have a good journey","መልካም ጉዞ","melkam guzo"]];
+  var pw=document.getElementById("phrases");
+  PH.forEach(function(p){pw.appendChild(el("div","card phrase",'<span class="en">'+esc(p[0])+'</span><span class="am">'+esc(p[1])+'</span><span class="pr">'+esc(p[2])+'</span>'));});
+
+  /* ---------- country facts ---------- */
+  var CF=[["pin","Capital","Addis Ababa","pink"],["people","Population","~138 million","orange"],["map","Area","1,127,127 km²","cyan"],
+   ["chat","Official language","Amharic","lime"],["bank","Government","Federal · 12 regions + 2 cities","pink"],["coins","Currency","Ethiopian Birr (ETB)","orange"]];
+  var cfw=document.getElementById("countryFacts");
+  CF.forEach(function(f){cfw.appendChild(el("div","card cfact",'<div class="ic" style="background:'+C[f[3]]+'">'+ic(f[0])+'</div><div><div class="k">'+esc(f[1])+'</div><div class="v">'+esc(f[2])+'</div></div>'));});
+
+  /* ---------- impact ---------- */
+  var ST=[["school",1994,"+","Partner schools, incl. 217 built from the ground up","pink"],
+   ["backpack",319100,"+","Previously out-of-school children enrolled","orange"],
+   ["chart",863400,"+","People impacted by capacity-building training","cyan"],
+   ["award",569,"","High-school scholarships awarded","lime"],
+   ["water",532400,"+","People reached with safe water & sanitation","cyan"],
+   ["star",6833,"","Active school clubs","orange"],
+   ["siren",1000000,"+","Children reached in emergency & protection","pink"],
+   ["book",382150,"+","Books supplied","lime"]];
+  var sw=document.getElementById("stats");
+  ST.forEach(function(s){sw.appendChild(el("div","card stat",'<div class="ic" style="background:'+C[s[4]]+'">'+ic(s[0])+'</div><div class="n" data-target="'+s[1]+'" data-suffix="'+s[2]+'">'+s[1].toLocaleString()+s[2]+'</div><div class="l">'+esc(s[3])+'</div>'));});
+
+  /* ---------- vmg + values ---------- */
+  var VMG=[["compass","Our Vision","A world where all people are connected to their greatness.","pink"],
+   ["flag","Our Mission","Leverage the power of education to transform a nation.","orange"],
+   ["grad","Our Goal","All Ethiopians have access to quality education, funded free of foreign aid by 2045.","cyan"]];
+  var vw=document.getElementById("vmgGrid");
+  VMG.forEach(function(v){var c=el("div","card");c.style.setProperty("--c",C[v[3]]);
+    c.innerHTML='<div class="k">'+ic(v[0])+esc(v[1])+'</div><div class="v">'+esc(v[2])+'</div>';vw.appendChild(c);});
+  var VAL=[["people","Community","Our work connects human beings.","pink"],
+   ["compass","Infinite Possibility","We create at least three possibilities for every challenge.","orange"],
+   ["shield","Integrity","We do what we say we will do — and clean up any mess, with all parties.","cyan"],
+   ["chat","Open Communication","We leave nothing unsaid; the power is in the listening.","lime"],
+   ["heart","Value Exchange","Our partners want to work with us again.","pink"],
+   ["globe","Equity","We uphold justice and fairness — inclusive service for all.","orange"],
+   ["star","Fun","We create spaces where people feel energized and bring their full talents.","cyan"]];
+  var PILL=[["grad","Education (K–12)","pink"],["shield","Protection","orange"],["water","WASH","cyan"],["compass","Leadership Development","lime"]];
+  var plw=document.getElementById("pillars");
+  PILL.forEach(function(p){plw.appendChild(el("div","card",'<div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:9px"><span style="width:48px;height:48px;border-radius:14px;display:grid;place-items:center;color:#fff;font-size:1.35rem;background:'+C[p[2]]+'">'+ic(p[0])+'</span><b style="font-weight:800;font-size:.88rem">'+esc(p[1])+'</b></div>'));});
+  var valw=document.getElementById("values");
+  VAL.forEach(function(v){var c=el("div","card value");c.style.setProperty("--c",C[v[3]]);
+    c.innerHTML='<div class="k"><span class="sw">'+ic(v[0])+'</span>'+esc(v[1])+'</div><div class="v">'+esc(v[2])+'</div>';valw.appendChild(c);});
+
+  /* ---------- count-up ---------- */
+  var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+  if(!reduce && "IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){
+      if(!en.isIntersecting||en.target.dataset.done)return;en.target.dataset.done="1";
+      var tgt=+en.target.dataset.target,suf=en.target.dataset.suffix||"",t0=null,dur=1400;
+      function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3);
+        en.target.textContent=Math.round(tgt*e).toLocaleString()+(p===1?suf:"");if(p<1)requestAnimationFrame(step);}
+      requestAnimationFrame(step);});},{threshold:.4});
+    document.querySelectorAll(".stat .n").forEach(function(n){io.observe(n);});
+  }
+  /* ---------- scrollspy ---------- */
+  if("IntersectionObserver" in window){
+    var spy=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){
+      var id=en.target.id.replace("day-","");document.querySelectorAll(".daypill").forEach(function(p){p.removeAttribute("aria-current");});
+      var a=document.getElementById("pill-"+id);if(a){a.setAttribute("aria-current","true");a.scrollIntoView({block:"nearest",inline:"center",behavior:"smooth"});}}});},{rootMargin:"-45% 0px -50% 0px"});
+    document.querySelectorAll(".day").forEach(function(d){spy.observe(d);});
+  }
+  /* ---------- copy ---------- */
+  document.querySelectorAll(".copybtn").forEach(function(b){b.addEventListener("click",function(){
+    var v=b.getAttribute("data-copy"),old=b.textContent;
+    function ok(){b.textContent="Copied ✓";setTimeout(function(){b.textContent=old;},1500);}
+    function sel(){var s=b.previousElementSibling;if(s){var r=document.createRange();r.selectNodeContents(s);var sl=getSelection();sl.removeAllRanges();sl.addRange(r);}b.textContent="Select & copy";setTimeout(function(){b.textContent=old;},1800);}
+    try{navigator.clipboard.writeText(v).then(ok,sel);}catch(e){sel();}});});
+
+  /* ---------- theme ---------- */
+  var root=document.documentElement,tb=document.getElementById("themeBtn");
+  function setGlyph(){var dark=root.getAttribute("data-theme")==="dark"||(!root.getAttribute("data-theme")&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);tb.innerHTML=ic(dark?"sun":"moon");}
+  try{var s=localStorage.getItem("lyl-theme");if(s)root.setAttribute("data-theme",s);}catch(e){}
+  setGlyph();
+  tb.addEventListener("click",function(){var cur=root.getAttribute("data-theme"),sd=window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches;
+    var next=cur?(cur==="dark"?"light":"dark"):(sd?"light":"dark");root.setAttribute("data-theme",next);
+    try{localStorage.setItem("lyl-theme",next);}catch(e){}setGlyph();});
+
+  /* ---------- back to top ---------- */
+  var topBtn=document.getElementById("top");
+  window.addEventListener("scroll",function(){topBtn.classList.toggle("show",window.scrollY>700);},{passive:true});
+  topBtn.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+
+  /* ---------- smooth in-page anchor links (hero CTAs + top nav) ---------- */
+  document.querySelectorAll('a[href^="#"]:not(.daypill)').forEach(function(a){
+    a.addEventListener("click",function(e){
+      var id=a.getAttribute("href").slice(1);if(!id)return;
+      var t=document.getElementById(id);
+      if(t){e.preventDefault();t.scrollIntoView({behavior:"smooth",block:"start"});}
+    });
+  });
+
+  /* ---------- itinerary editor (saves to the live page via the artifact capability) ---------- */
+  var WORK=[];
+  function whereParts(wv){if(wv&&typeof wv==="object")return {t:wv.t||"",u:wv.u||""};return {t:(wv==null?"":String(wv)),u:""};}
+  function makeWhere(t,u){t=(t||"").trim();u=(u||"").trim();return u?{t:t,u:u}:t;}
+  function inp(val,ph,cls,oninput){var e=document.createElement("input");e.type="text";e.className="ed-input"+(cls?" "+cls:"");e.value=val||"";if(ph)e.placeholder=ph;e.addEventListener("input",function(){oninput(e.value);});return e;}
+  function field(label,node){var f=el("div","ed-field");var l=document.createElement("label");l.textContent=label;f.appendChild(l);f.appendChild(node);return f;}
+
+  var overlay=el("div","ed-overlay"),sheet=el("div","ed-sheet"),bar=el("div","ed-bar"),edBody=el("div","ed-body");
+  var hTitle=el("h3",null,"Edit itinerary"),sp=el("span","sp");
+  var saveBtn=el("button","ed-btn primary");saveBtn.type="button";saveBtn.textContent="Save changes";
+  var cancelBtn=el("button","ed-btn ghost");cancelBtn.type="button";cancelBtn.textContent="Close";
+  bar.appendChild(hTitle);bar.appendChild(sp);bar.appendChild(cancelBtn);bar.appendChild(saveBtn);
+  sheet.appendChild(bar);sheet.appendChild(edBody);overlay.appendChild(sheet);document.body.appendChild(overlay);
+  var edToast=el("div","ed-toast");document.body.appendChild(edToast);
+
+  function toast(msg,warn){edToast.textContent=msg;edToast.className="ed-toast show"+(warn?" warn":"");setTimeout(function(){edToast.className="ed-toast"+(warn?" warn":"");},2800);}
+
+  function rowEditor(d,r,ri){
+    var wrap=el("div","ed-row"),wp=whereParts(r[2]);
+    var t=inp(r[0],"Time",null,function(v){r[0]=v;});
+    var a=inp(r[1],"Activity",null,function(v){r[1]=v;});
+    var x=el("button","ed-xrow");x.type="button";x.textContent="✕";x.title="Remove activity";
+    x.addEventListener("click",function(){d.rows.splice(ri,1);renderEditor();});
+    var wl=inp(wp.t,"Where (optional)","full",function(v){r[2]=makeWhere(v,whereParts(r[2]).u);});
+    var wu=inp(wp.u,"Link URL (optional)","full",function(v){r[2]=makeWhere(whereParts(r[2]).t,v);});
+    wrap.appendChild(t);wrap.appendChild(a);wrap.appendChild(x);wrap.appendChild(wl);wrap.appendChild(wu);
+    return wrap;
+  }
+  function renderEditor(){
+    edBody.innerHTML="";
+    var hint=el("p","ed-hint");hint.textContent="Edit times, activities and places below. Saving updates the live page for everyone with the link.";edBody.appendChild(hint);
+    WORK.forEach(function(d,di){
+      var card=el("div","ed-day"),hd=el("div","ed-day-hd");
+      hd.innerHTML='<span class="num">Day '+(di+1)+'</span>';card.appendChild(hd);
+      card.appendChild(field("Date",inp(d.date,"e.g. Thursday, 12 November 2026",null,function(v){d.date=v;})));
+      card.appendChild(field("Theme",inp(d.theme,"e.g. Training · Bishoftu",null,function(v){d.theme=v;})));
+      card.appendChild(field("Intro (optional)",inp(d.intro||"","Short summary line for the day",null,function(v){d.intro=v;})));
+      if(!d.rows)d.rows=[];
+      var rowsWrap=el("div","ed-rows");
+      d.rows.forEach(function(r,ri){rowsWrap.appendChild(rowEditor(d,r,ri));});
+      card.appendChild(rowsWrap);
+      var addRow=el("button","ed-mini");addRow.type="button";addRow.textContent="+ Add activity";
+      addRow.addEventListener("click",function(){d.rows.push(["","",""]);renderEditor();});
+      card.appendChild(addRow);
+      var foot=el("div","ed-day-foot");foot.appendChild(document.createElement("span"));
+      var del=el("button","ed-del");del.type="button";del.textContent="✕ Remove this day";
+      del.addEventListener("click",function(){if(WORK.length>1){WORK.splice(di,1);renderEditor();}});
+      foot.appendChild(del);card.appendChild(foot);
+      edBody.appendChild(card);
+    });
+    var addDay=el("button","ed-btn ghost");addDay.type="button";addDay.style.marginTop="6px";addDay.textContent="+ Add a day";
+    addDay.addEventListener("click",function(){WORK.push({n:"",date:"New day",short:"Day",theme:"",badge:"Day",bi:"calendar",c:"pink",rows:[["","",""]]});renderEditor();});
+    edBody.appendChild(addDay);
+  }
+  function openEd(){WORK=JSON.parse(JSON.stringify(DAYS));renderEditor();overlay.classList.add("open");document.body.style.overflow="hidden";}
+  function closeEd(){overlay.classList.remove("open");document.body.style.overflow="";}
+
+  async function publishNow(){
+    var art=null;try{art=await claude.use("artifact");}catch(e){}
+    if(!art)return {ok:false,reason:"unavailable"};
+    var json=JSON.stringify({DAYS:DAYS}).replace(/</g,"\\u003c");
+    var open="<"+"!--DATA_START--"+">",close="<"+"!--DATA_END--"+">";
+    var tag=open+"<scr"+"ipt type=\"application/json\" id=\"lyldata\">"+json+"<\/scr"+"ipt>"+close;
+    var i=ORIGINAL_DOC.indexOf(open),j=ORIGINAL_DOC.indexOf(close);
+    if(i<0||j<0)return {ok:false,reason:"nomarker"};
+    var doc=ORIGINAL_DOC.slice(0,i)+tag+ORIGINAL_DOC.slice(j+close.length);
+    try{await art.publish(doc);return {ok:true};}
+    catch(e){return {ok:false,reason:(e&&e.code)||"error"};}
+  }
+  async function doSave(){
+    saveBtn.disabled=true;cancelBtn.disabled=true;saveBtn.textContent="Saving…";
+    WORK.forEach(function(d,i){d.n=("0"+(i+1)).slice(-2);if(!d.short)d.short="Day "+(i+1);});
+    DAYS=WORK;
+    var res=await publishNow();
+    if(res.ok){toast("Saved — updating the page…");}
+    else{
+      saveBtn.disabled=false;cancelBtn.disabled=false;saveBtn.textContent="Save changes";
+      var m=(res.reason==="not_writer"||res.reason==="not_granted")?"You have view-only access to this page.":
+            res.reason==="conflict"?"Someone else just saved — reopening…":
+            (res.reason==="unavailable"||res.reason==="nomarker")?"Editing isn’t available here.":
+            "Couldn’t save — please try again.";
+      toast(m,true);
+    }
+  }
+  cancelBtn.addEventListener("click",closeEd);
+  saveBtn.addEventListener("click",doSave);
+
+  var editBtn=el("button","editbtn");editBtn.type="button";editBtn.innerHTML='<span aria-hidden="true">✎</span> Edit itinerary';
+  var dh=document.querySelector("#days .section-head");if(dh)dh.appendChild(editBtn);
+  editBtn.addEventListener("click",openEd);
+  if(window.claude&&claude.use){(async function(){
+    var canEdit=false,art=null;
+    try{var u=await claude.use("user");if(u&&u.canEdit)canEdit=!!u.canEdit();}catch(e){}
+    try{art=await claude.use("artifact");}catch(e){}
+    if(canEdit&&art)editBtn.classList.add("show");
+  })();}
+
+  /* install as an app: register a service worker for offline use when self-hosted (harmless where unavailable) */
+  if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){});});}
+})();
+</script>
+
+</body>
+</html>
